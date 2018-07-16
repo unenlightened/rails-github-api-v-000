@@ -6,7 +6,7 @@ class RepositoriesController < ApplicationController
     }
     @repos = JSON.parse(resp.body)
 
-    byebug
+    # I would just grab user from the first repo's [owner][login], but tests don't have a full repo filled in.
     @username = session[:username]
   end
 
