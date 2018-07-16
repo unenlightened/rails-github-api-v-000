@@ -10,6 +10,7 @@ class SessionsController < ApplicationController
       "Accept": "application/json"
     }
 
+byebug
     body = JSON.parse(resp.body)
     session[:token] = body["access_token"]
 
